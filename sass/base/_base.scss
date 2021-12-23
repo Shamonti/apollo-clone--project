@@ -14,3 +14,15 @@ body {
   box-sizing: border-box;
   background-color: $color-grey-light--2;
 }
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: $color-grey-light--2;
+  padding: 0.5rem 1rem;
+  text-align: left;
+}

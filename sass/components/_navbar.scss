@@ -39,26 +39,26 @@
   padding: 1rem 2rem 1rem 2rem;
 
   i {
-    color: $color-grey-dark--2;
+    color: $color-secondary;
   }
 
   &:hover {
-    color: $color-blue;
+    color: $color-primary;
     transition: none !important;
 
     i {
-      color: $color-blue;
+      color: $color-primary;
     }
   }
 
   &.active {
-    color: $color-blue;
+    color: $color-primary;
     background: $color-grey-light--2 !important;
     border-left: 1px solid $color-grey-light--1;
     border-right: 1px solid $color-grey-light--1;
 
     i {
-      color: $color-blue;
+      color: $color-primary;
     }
   }
 }
@@ -90,16 +90,20 @@
   position: absolute;
   top: 4.5rem;
   left: 3rem;
+  height: 14.2rem;
+  width: 70rem;
 
   &--left {
     flex-basis: 50%;
     padding: 3rem;
+    cursor: pointer;
+    width: 35rem;
 
     &:hover {
       background-color: rgba($color-grey-light--1, 0.5);
 
       .search__details--text .heading--sub {
-        color: $color-blue;
+        color: $color-primary;
       }
 
       .animate-arrow {
@@ -111,12 +115,14 @@
   &--right {
     flex-basis: 50%;
     padding: 3rem;
+    cursor: pointer;
+    width: 35rem;
 
     &:hover {
       background-color: rgba($color-grey-light--1, 0.5);
 
       .search__details--text .heading--sub {
-        color: $color-blue;
+        color: $color-primary;
       }
 
       .animate-arrow {
@@ -136,7 +142,7 @@
     align-items: center;
 
     i {
-      color: $color-blue;
+      color: $color-primary;
     }
   }
 
@@ -160,4 +166,48 @@
   display: flex;
   z-index: 10001;
   position: absolute;
+}
+
+.navbar02 {
+  display: flex;
+  padding: 1.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    cursor: pointer;
+    position: relative;
+
+    &--01 {
+      color: $color-primary;
+      transition: all 0.3s;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        padding-top: 5.2rem;
+        border-bottom: 1px solid $color-primary;
+        width: 80%;
+      }
+    }
+
+    &:hover {
+      color: $color-primary;
+      transition: all 0.3s;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        padding-top: 5.2rem;
+        border-bottom: 1px solid $color-primary;
+        width: 80%;
+      }
+    }
+  }
 }

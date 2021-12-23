@@ -1,0 +1,29 @@
+.left-side {
+  width: 30rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+
+  .heading--sub {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .search-bar input {
+    color: $color-black;
+    font-weight: 500;
+    background-color: transparent;
+  }
+
+  .input-name {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      color: $color-primary;
+      // padding: 1.5rem;
+      font-weight: 600;
+    }
+  }
+}
