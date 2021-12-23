@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   background-color: $color-white;
+  border-right: 1px solid $color-grey-light--1;
 
   .heading--sub {
     font-size: 1.8rem;
@@ -16,14 +17,65 @@
     background-color: transparent;
   }
 
-  .input-name {
-    display: flex;
-    flex-direction: column;
+  .input {
+    &-name,
+    &-job,
+    &-company,
+    &-industry,
+    &-country,
+    &-city {
+      display: flex;
+      flex-direction: column;
 
-    &--title {
-      color: $color-primary;
-      // padding: 1.5rem;
-      font-weight: 600;
+      &--title {
+        color: $color-primary;
+        font-weight: 600;
+      }
     }
+  }
+
+  .input-job {
+    position: relative;
+
+    .jobList {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 1000;
+      background-color: $color-white;
+      margin: 0 1.6rem;
+      top: 8.8rem;
+      left: 0;
+      height: 15rem;
+      width: 27rem;
+      overflow: auto;
+      border: 1px solid rgba($color-secondary, 0.3);
+      border-radius: 0.3rem;
+      color: $color-black;
+
+      li {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+      }
+
+      & li:hover {
+        background-color: $color-grey-light--2;
+      }
+    }
+  }
+}
+
+.right-side {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+
+  // ::-webkit-scrollbar {
+  //   height: 100vh;
+  // }
+
+  .table tr th {
+    color: $color-secondary !important;
+    font-weight: 400;
   }
 }

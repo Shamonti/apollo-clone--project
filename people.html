@@ -111,7 +111,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="d-flex">
       <!-- SIDEBAR -->
       <section class="left-side">
         <div class="heading--sub py-3 ps-4 fw-bold u-border-bottom">
@@ -127,6 +127,7 @@
           />
         </div>
 
+        <!-- INPUT NAME -->
         <div class="input-name u-border-bottom py-4 px-4">
           <div class="input-name--title pb-4">
             <i class="fas fa-id-card pe-2"></i>
@@ -138,12 +139,157 @@
             name="name"
             id="name"
             placeholder="
-          Enter Name... "
+          Enter name... "
+          />
+        </div>
+
+        <!-- INPUT JOB TITLE -->
+        <div class="input-job u-border-bottom py-4 px-4">
+          <div class="input-job--title pb-4">
+            <i class="fab fa-black-tie pe-2"></i>
+            Job Title
+          </div>
+
+          <input
+            type="text"
+            name="job"
+            id="job"
+            placeholder="
+          Search for a job title"
+          />
+
+          <ul id="jobList" class="jobList hide">
+            <li>software engineer</li>
+            <li>project manager</li>
+            <li>teacher</li>
+            <li>owner</li>
+            <li>student</li>
+          </ul>
+        </div>
+
+        <!-- INPUT COMPANY NAME -->
+        <div class="input-company u-border-bottom py-4 px-4">
+          <div class="input-company--title pb-4">
+            <i class="fas fa-building pe-2"></i>
+            Company
+          </div>
+
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="
+          Enter companies"
+          />
+        </div>
+
+        <!-- INPUT INDUSTRY NAME -->
+        <div class="input-industry u-border-bottom py-4 px-4">
+          <div class="input-industry--title pb-4">
+            <i class="fas fa-warehouse pe-2"></i>
+            Industry
+          </div>
+
+          <input
+            type="text"
+            name="industry"
+            id="industry"
+            placeholder="
+          Search industries"
+          />
+        </div>
+
+        <!-- INPUT COUNTRY NAME -->
+        <div class="input-country u-border-bottom py-4 px-4">
+          <div class="input-country--title pb-4">
+            <i class="fas fa-globe pe-2"></i>
+            Country
+          </div>
+
+          <input
+            type="text"
+            name="country"
+            id="country"
+            placeholder="
+          Search countries..."
+          />
+        </div>
+
+        <!-- INPUT CITY NAME -->
+        <div class="input-city u-border-bottom py-4 px-4">
+          <div class="input-city--title pb-4">
+            <i class="fas fa-university pe-2"></i>
+            City
+          </div>
+
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="
+          Enter cities..."
           />
         </div>
       </section>
 
-      <section class="right-side"></section>
+      <section class="right-side">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Title</th>
+              <th scope="col">Company</th>
+              <th scope="col">Email</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Job Title</th>
+              <th scope="col">Seniority</th>
+              <th scope="col">City</th>
+              <th scope="col">State</th>
+              <th scope="col">Country</th>
+              <th scope="col">Postal Code</th>
+              <th scope="col">LinkedIn URL</th>
+              <th scope="col">Organization Name</th>
+              <th scope="col">Organization Domain</th>
+              <th scope="col">Organization Phone</th>
+              <th scope="col">Organization Facebook URL</th>
+              <th scope="col">Organization LinkedIn Numerical URLs</th>
+              <th scope="col">Organization Twitter URL</th>
+              <th scope="col">Organization Website URL</th>
+              <th scope="col">Organization Angellist URL</th>
+
+              <th scope="col">Organization Foundation Year</th>
+              <th scope="col">Organization HQ Location City</th>
+              <th scope="col">Organization HQ Location Postal Code</th>
+              <th scope="col">Organization HQ Location State</th>
+              <th scope="col">Organization HQ Location Country</th>
+              <th scope="col">Organization Number Of Employees</th>
+              <th scope="col">Organization Languages</th>
+              <th scope="col">Organization Industries</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <!-- Bootstrap JS -->
@@ -161,7 +307,25 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#job').on('keyup', function () {
+          var value = $(this).val().toLowerCase();
+          $('#jobList li').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -157,17 +157,6 @@
   }
 }
 
-.hide {
-  display: none;
-  z-index: 10000;
-}
-
-.show {
-  display: flex;
-  z-index: 10001;
-  position: absolute;
-}
-
 .navbar02 {
   display: flex;
   padding: 1.5rem;

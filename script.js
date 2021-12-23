@@ -1,16 +1,16 @@
 'user strict';
 
-const searchLink = document.querySelector('.nav-link__search');
-const searchBox = document.querySelector('.search__details');
-
+const jobList = document.querySelector('.jobList');
 const body = document.querySelector('body');
 
-searchLink.addEventListener('mouseover', function () {
-  searchBox.classList.remove('hide');
-  searchBox.classList.add('show');
+const inputJob = document.getElementById('job');
+
+inputJob.addEventListener('keyup', function () {
+  jobList.classList.remove('hide');
+  jobList.classList.add('show');
 });
 
 body.addEventListener('click', function () {
-  searchBox.classList.remove('show');
-  searchBox.classList.add('hide');
+  jobList.classList.remove('show');
+  jobList.classList.add('hide');
 });
