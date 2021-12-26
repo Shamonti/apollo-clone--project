@@ -4,6 +4,9 @@
   width: 3rem;
   border-radius: 50%;
   cursor: pointer;
+  position: fixed;
+  top: 0.6rem;
+  right: 0;
 
   &__name {
     margin: 0;
@@ -21,44 +24,56 @@
   background-color: $color-white;
   position: relative;
 
+  transition: all 0.1s !important;
+
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0;
+  height: 4.2rem;
 
-  .nav {
-    flex-basis: 100%;
+  // .nav {
+  //   flex-basis: 100%;
 
-    .nav-tabs {
-      border-bottom: 1px solid $color-grey-light--1 !important;
-    }
-  }
-}
-
-.navbar-nav .nav-item .nav-link {
-  color: $color-black;
-  padding: 1rem 2rem 1rem 2rem;
-
-  i {
-    color: $color-secondary;
-  }
-
-  &:hover {
-    color: $color-primary;
-    transition: none !important;
-
-    i {
-      color: $color-primary;
-    }
-  }
-
-  &.active {
-    color: $color-primary;
-    background: $color-grey-light--2 !important;
-    border-left: 1px solid $color-grey-light--1;
-    border-right: 1px solid $color-grey-light--1;
+  //   .nav-tabs {
+  //     border-bottom: 1px solid $color-grey-light--1 !important;
+  //   }
+  // }
+  // .navbar-toggler {
+  //   border: none !important;
+  //   outline: none !important;
+  //   &:active,
+  //   &:focus,
+  //   &:link {
+  //     border: none !important;
+  //     outline: none !important;
+  //   }
+  // }
+  .navbar-nav .nav-item .nav-link {
+    color: $color-black;
+    padding: 1rem 2rem 1rem 2rem;
 
     i {
+      color: $color-secondary;
+    }
+
+    &:hover {
       color: $color-primary;
+      transition: none !important;
+
+      i {
+        color: $color-primary;
+      }
+    }
+
+    &.active {
+      color: $color-primary;
+      background: $color-grey-light--2 !important;
+      border-left: 1px solid $color-grey-light--1;
+      border-right: 1px solid $color-grey-light--1;
+
+      i {
+        color: $color-primary;
+      }
     }
   }
 }
@@ -78,7 +93,7 @@
 
   .active {
     color: #495057;
-    background-color: $color-grey-light--2 !important;
+    background-color: $color-grey-light--2;
     border-color: #dee2e6 #dee2e6 $color-grey-light--2 !important;
   }
 }
@@ -171,7 +186,7 @@
     cursor: pointer;
     position: relative;
 
-    &--01 {
+    &--colored {
       color: $color-primary;
       transition: all 0.3s;
 

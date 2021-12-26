@@ -69,13 +69,24 @@
   display: flex;
   width: 100%;
   overflow-x: auto;
+  border: 1px solid $color-grey-light--1;
 
-  // ::-webkit-scrollbar {
-  //   height: 100vh;
-  // }
+  .table {
+    margin: 1rem;
+    background-color: $color-white;
 
-  .table tr th {
-    color: $color-secondary !important;
-    font-weight: 400;
+    .name {
+      color: $color-primary !important;
+      font-weight: 600;
+    }
+
+    tr th {
+      color: $color-secondary !important;
+      font-weight: 400;
+    }
+
+    tr td {
+      text-align: center;
+    }
   }
 }
