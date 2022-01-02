@@ -1,0 +1,15 @@
+.btn-access {
+  color: $color-white;
+  background-color: $color-primary;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  i {
+    color: $color-white !important;
+  }
+
+  &:hover {
+    background-color: $color-blue--1;
+    color: $color-white !important;
+  }
+}
