@@ -1,0 +1,11 @@
+.table {
+  .table-row {
+    cursor: pointer;
+
+    th {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
