@@ -7,9 +7,12 @@
 @import 'base/utilities';
 
 @import 'components/buttons';
+@import 'components/card';
+@import 'components/faq';
 @import 'components/navbar';
 @import 'components/sidebar';
 
 @import 'layout/navigation';
-@import 'layout/card';
 @import 'layout/table';
+
+@import 'pages/user';

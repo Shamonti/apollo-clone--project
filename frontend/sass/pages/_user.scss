@@ -1,0 +1,22 @@
+.section-colleagues {
+  a {
+    color: $color-primary;
+
+    &:hover {
+      color: $color-grey-dark--2;
+    }
+  }
+}
+
+.section-faq {
+  margin: 3rem 2.5rem !important;
+
+  .card-header {
+    background-color: transparent;
+    font-size: 1.8rem !important;
+    font-weight: 500 !important;
+    color: $color-grey-dark--2;
+    padding: 3.5rem 0;
+    text-align: left;
+  }
+}
